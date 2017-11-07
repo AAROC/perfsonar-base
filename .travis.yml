@@ -1,18 +1,17 @@
+---
 language: python
 python:
-- '2.7'
-- '3.3'
-- pypy
+  - '2.7'
 sudo: required
 services:
-- docker
+  - docker
 before_install:
-- sudo apt-get -qq update
+  - sudo apt-get -qq update
 install:
-- pip install molecule
-- pip install docker
+  - pip install molecule
+  - pip install docker
 script:
-- molecule test
+  - molecule test
 notifications:
   slack:
     on_success: change # default: always

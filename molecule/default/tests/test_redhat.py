@@ -1,3 +1,4 @@
+# Test RedHat-specific things here
 import os
 
 import testinfra.utils.ansible_runner

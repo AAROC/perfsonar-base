@@ -2,3 +2,5 @@
 # tasks file for perfsonar-base
 - include: "install-{{ ansible_os_family | lower }}.yml"
 - include: install-perfsonar.yml
+- include: configure-network.yml
+- include: configure-db.yml

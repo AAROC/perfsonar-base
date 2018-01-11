@@ -19,20 +19,12 @@ def test_hosts_file(host):
 def test_ntp(host):
     assert host.package('ntp').is_installed
 
-@pytest.mark.parametrize("package_name", [("perfsonar-tools"),("perfsonar-core")])
-
-@pytest.mark.parametrize("tool_name", (""))
+@pytest.mark.parametrize("package_name", [("perfsonar-tools"),("perfsonar-core"),("perfsonar-common"),("perfsonar-oppd-bwctl"),("perfsonar-oppd-owamp"),("perfsonar-oppd-server"),("perfsonar-oppd-shared"),("perfsonar-testpoint"),("perfsonar-tools")])
 
 def test_prerequisites(host,package_name):
     package = host.package(package_name)
     assert package.is_installed
 
-def test_migration(host):
-    f = host.file('/usr/lib/perfsonar/scripts/ps-migrate-backup.sh')
-    assert f.exists
-
-def test_pscheduler_logs(host):
-    f = host.file('/var/log/pscheduler/pscheduler.log')
-    assert f.exists
-
-def test_esmond_measurement_archive(host):
+# def test_migration(host):
+#     f = host.file('/usr/lib/perfsonar/scripts/ps-migrate-backup.sh')
+#     assert f.exists

@@ -1,0 +1,6 @@
+.molecule/*
+*.pyc
+__pycache__
+.retry
+.vscode/
+.cache/

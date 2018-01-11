@@ -1,0 +1,8 @@
+---
+# prep.yml - prepare a base perfsonar install for the core and tools
+- name: Ensure perfsonar user is present
+  debug:
+    msg: "not implemented yet"
+- name: Ensure perfsonar group is present and user belongs to it
+  debug:
+    msg: "not implemented yet"

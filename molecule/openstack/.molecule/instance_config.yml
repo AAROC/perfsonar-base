@@ -1,0 +1,8 @@
+# Molecule managed
+
+---
+- address: 151.97.41.113
+  identity_file: /home/becker/Ops/AAROC/DevOps/Ansible/roles/perfsonar-base/molecule/openstack/.molecule/ssh_key
+  instance: perfsonar-base-centos7
+  port: 22
+  user: centos

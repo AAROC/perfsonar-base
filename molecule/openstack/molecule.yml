@@ -1,0 +1,21 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: openstack
+lint:
+  name: yamllint
+platforms:
+  - name: perfsonar-base-centos7
+    image: CentOS7
+    flavor: medium
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: openstack
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
